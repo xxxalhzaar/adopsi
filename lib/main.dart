@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthypet/screens/account_screen.dart';
 import 'package:healthypet/screens/splash_screen.dart';
 
 void main() {
@@ -19,6 +20,23 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
+        useMaterial3: true,
+      ),
+      home: AccountScreen(),
     );
   }
 }
